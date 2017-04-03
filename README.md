@@ -3,6 +3,14 @@
 Adds Gmail-esque keyboard shorcuts to Mail.app.  This is still very much a work
 in progress.  Tested with Mail for OS X Sierra.
 
+__NOTE:__ Each subsequent Mail release will break the bundle. To fix it:
+
+- run `find_uuid.sh` to get the new UUID
+- edit _Supporting\ Files/info.plist_ to include the new UUID under `Supported10.12PluginCompatibilityUUIDs`
+- build the plugin
+- in a terminal, run `defaults write com.apple.mail EnableBundles -bool true` to enable the plugin
+- restart Mail
+
 ## Supported Shortcuts
 
 |  Key   | Action                         |
